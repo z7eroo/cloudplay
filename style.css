@@ -1,0 +1,48 @@
+:root{--bg:#0b0f22;--bg2:#151a3d;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.1);--tx:#eef1ff;--mut:#9aa3c7;--p:#8b7cff;--c:#22d3ee}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;color:var(--tx);min-height:100vh;display:flex;flex-direction:column;
+background:linear-gradient(180deg,var(--bg2),var(--bg) 40%,#080b16) fixed}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;
+background:rgba(11,15,34,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.25rem;color:var(--c)}
+.brand img{width:44px;height:44px;border-radius:12px}
+.chip,.seg button{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;cursor:pointer;transition:.2s}
+.chip:hover,.seg button:hover{transform:translateY(-2px)}
+main{flex:1;width:100%;max-width:960px;margin:0 auto;padding:18px 16px;animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.tools{display:flex;gap:10px;align-items:center;margin-bottom:18px}
+.search{flex:1;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 14px}
+.search input{flex:1;background:none;border:0;outline:0;color:var(--tx);font:inherit;padding:13px 0}
+.seg{display:flex;gap:6px}
+.seg button.on{background:linear-gradient(90deg,var(--p),var(--c));border-color:transparent;font-weight:700}
+.list{display:flex;flex-direction:column;gap:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.card{display:flex;background:var(--card);border:1px solid var(--line);border-radius:22px;transition:.25s;animation:in .4s ease both}
+.card:hover{transform:translateY(-4px);border-color:var(--p);box-shadow:0 10px 30px rgba(139,124,255,.2)}
+.card:active{transform:scale(.97)}
+.card.row{align-items:center;gap:14px;padding:12px}
+.card.row img{width:72px;height:72px;border-radius:18px;flex:none}
+.card.row h3{font-size:1.1rem}.card.row p{color:var(--mut);font-size:.9rem;margin-top:4px;line-height:1.5}
+.card.tile{flex-direction:column;align-items:center;gap:10px;padding:16px 10px;text-align:center}
+.card.tile img{width:96px;height:96px;border-radius:24px}
+.card.tile h3{font-size:1rem}
+.empty{text-align:center;color:var(--mut);padding:40px}
+.head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.head img{width:96px;height:96px;border-radius:24px}
+.head h1{font-size:1.8rem}.head .type{color:var(--c);margin-top:4px}
+.cover{width:100%;border-radius:24px;overflow:hidden;margin-bottom:18px;background:linear-gradient(135deg,#1b2260,#0b0f22 60%,#0a3a4a);display:flex;justify-content:center;padding:28px;border:1px solid var(--line)}
+.cover img{max-width:260px;width:60%;border-radius:36px;box-shadow:0 0 60px rgba(34,211,238,.35)}
+.desc{line-height:1.8;color:#d6dbf5;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:18px;font-weight:700;color:#fff;
+background:linear-gradient(90deg,var(--p),var(--c));transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.btn:active{transform:scale(.96)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.btn.soft{background:var(--card);border:1px solid var(--line)}
+.feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.feat div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px}
+.feat b{display:block;margin-bottom:6px}.feat span{color:var(--mut);font-size:.92rem;line-height:1.6}
+h2{margin:22px 0 12px;font-size:1.2rem}
+.back{display:inline-block;margin-bottom:12px;color:var(--mut)}
+footer{text-align:center;padding:22px 16px 28px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px;align-items:center;color:var(--mut)}
+@media(max-width:520px){.seg button{padding:8px 10px}}
